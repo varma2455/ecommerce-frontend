@@ -1,6 +1,124 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Welcome Background */
+.welcome {
+  height: 100vh;
+  background: url("../assets/welcome.png") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(15, 15, 40, 0.78),
+    rgba(15, 15, 40, 0.78)
+  );
+}
+
+/* Content */
+.content {
+  position: relative;
+  max-width: 720px;
+  padding: 40px;
+  text-align: center;
+  color: white;
+  animation: fadeUp 1.3s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Brand Name */
+.brand {
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+/* Description */
+.description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  opacity: 0.92;
+  margin-bottom: 45px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+button {
+  padding: 15px 40px;
+  border-radius: 40px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, #4f46e3, #8b5cf6);
+  color: white;
+  box-shadow: 0 15px 30px rgba(79,70,229,0.2);
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.85);
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+/* Tagline */
+.tagline {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  opacity: 0.75;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brand {
+    font-size: 3.6rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
 }
